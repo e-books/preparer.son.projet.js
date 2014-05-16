@@ -9,3 +9,9 @@ Sans vouloir utiliser toute la batterie d'outils disponibles (on ne peut pas tou
 ##Pourquoi ce tuto?
 
 Je m'aperçois autour de moi (mais même moi) que finalement à part les "purs fronts", les développeurs utilisent très peu les outils d'intégration du monde javascript à leur disposition, voire même ne les connaissent pas.
+
+##Contributions
+
+Si vous souhaitez contribuer, faire des remarques, ne pas être d'accord, etc. ... N'hésitez pas à utiliser les fonctionnalités de contribution de **GitHub** et à faire des PR, des issues, etc. ...
+
+Bonne lecture.
