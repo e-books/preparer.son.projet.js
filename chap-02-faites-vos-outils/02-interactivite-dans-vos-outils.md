@@ -111,9 +111,9 @@ Nous modifions le template pour prendre en compte la nouvelle valeur `defaultVal
 
 Dans un terminal, tapez `bb` et répondez (trompez vous aussi) :
 
-![Alt "mytool2.png"](imgs/mytool2.png)
+![Alt "mytool2.png"](assets/mytool2.png)
 
-![Alt "mytool1.png"](imgs/mytool.png)
+![Alt "mytool1.png"](assets/mytool.png)
 
 Avec le code généré :
 

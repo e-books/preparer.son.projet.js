@@ -13,7 +13,7 @@ Nul doute, que vous avez énormément d'autres exemples en tête. L'outil du mom
 
 Je passe mon temps à écrire des modèles et des collections Backbone qui ressemblent à ceci :
 
-{% highlight javascript %}
+```javascript
 /*--- Human Model ---*/
 var HumanModel = Backbone.Model.extend({
     defaults : function (){
@@ -27,6 +27,6 @@ var HumansCollection = Backbone.Collection.extend({
   url : "humans",
   model: HumanModel
 });
-{% endhighlight %}
+```
 
 Et j'aimerais aller plus vite, juste taper `bb Human` et obtenir mon fichier généré.
