@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Squelette de projet : backend | Préparer son projet JS</title>
+        <title>Mon 1er outil npm | Préparer son projet JS</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../chap-00-les-bases/02-squelette-frontend.html" />
+        <link rel="next" href="../chap-02-faites-vos-outils/02-interactivite-dans-vos-outils.html" />
         
         
-        <link rel="prev" href="../chap-00-les-bases/README.html" />
+        <link rel="prev" href="../chap-02-faites-vos-outils/README.html" />
         
 
-        <meta property="og:title" content="Squelette de projet : backend | Préparer son projet JS">
+        <meta property="og:title" content="Mon 1er outil npm | Préparer son projet JS">
         <meta property="og:site_name" content="Préparer son projet JS">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="e-books/preparer.son.projet.js" data-level="1.1" data-basepath=".." data-revision="1400227118246">
+    <div class="book" data-github="e-books/preparer.son.projet.js" data-level="3.1" data-basepath=".." data-revision="1400227118246">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -120,7 +120,7 @@
 
         
         <li>
-            <a href="https://github.com/e-books/preparer.son.projet.js/edit/master/chap-00-les-bases/01-squelette-backend.md" target="blank">Edit and Contribute</a>
+            <a href="https://github.com/e-books/preparer.son.projet.js/edit/master/chap-02-faites-vos-outils/01-mon-1er-outil-npm.md" target="blank">Edit and Contribute</a>
         </li>
         
 
@@ -222,7 +222,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 25%;min-width: 12.5%;"></div>
+        <div class="inner" style="width: 87.5%;min-width: 75%;"></div>
     </div>
     <div class="chapters">
     
@@ -232,15 +232,15 @@
     
         <a href="../chap-00-les-bases/01-squelette-backend.html" title="Squelette de projet : backend" class="chapter done " data-progress="1.1" style="left: 25%;"></a>
     
-        <a href="../chap-00-les-bases/02-squelette-frontend.html" title="Squelette de projet : frontend" class="chapter  " data-progress="1.2" style="left: 37.5%;"></a>
+        <a href="../chap-00-les-bases/02-squelette-frontend.html" title="Squelette de projet : frontend" class="chapter done " data-progress="1.2" style="left: 37.5%;"></a>
     
-        <a href="../chap-00-les-bases/03-livraison.html" title="Livraison" class="chapter  " data-progress="1.3" style="left: 50%;"></a>
+        <a href="../chap-00-les-bases/03-livraison.html" title="Livraison" class="chapter done " data-progress="1.3" style="left: 50%;"></a>
     
-        <a href="../chap-01-les-tests/README.html" title="Les tests" class="chapter  new-chapter" data-progress="2" style="left: 62.5%;"></a>
+        <a href="../chap-01-les-tests/README.html" title="Les tests" class="chapter done new-chapter" data-progress="2" style="left: 62.5%;"></a>
     
-        <a href="../chap-02-faites-vos-outils/README.html" title="Faites vos outils" class="chapter  new-chapter" data-progress="3" style="left: 75%;"></a>
+        <a href="../chap-02-faites-vos-outils/README.html" title="Faites vos outils" class="chapter done new-chapter" data-progress="3" style="left: 75%;"></a>
     
-        <a href="../chap-02-faites-vos-outils/01-mon-1er-outil-npm.html" title="Mon 1er outil npm" class="chapter  " data-progress="3.1" style="left: 87.5%;"></a>
+        <a href="../chap-02-faites-vos-outils/01-mon-1er-outil-npm.html" title="Mon 1er outil npm" class="chapter done " data-progress="3.1" style="left: 87.5%;"></a>
     
         <a href="../chap-02-faites-vos-outils/02-interactivite-dans-vos-outils.html" title="Un peu d&#39;interactivité" class="chapter  " data-progress="3.2" style="left: 100%;"></a>
     
@@ -249,93 +249,69 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2">
+                    <section class="normal" id="section-gitbook_7">
                     
-                        <h1 id="d-clarer-les-librairies-back-end-">Déclarer les librairies &quot;back-end&quot;</h1>
-<p>A la racine de skeleton, créer un fichier <code>package.json</code> :</p>
-<pre><code>skeleton/
-├── public.src/
-|   ├── js/
-|   |   └── app.js
-|   └── index.html
-├── main.js
-└── package.json
-</code></pre><p>Avec le contenu suivant :</p>
+                        <h1 id="juste-fais-le-">Juste fais-le ...</h1>
+<h2 id="package-json">package.json</h2>
+<p>Commencez par créer un répertoire <code>bbtools</code>. Ensuite dans ce répertoire, créez un fichier <code>package.json</code> avec le contenu suivant :</p>
 <pre><code>{
-  &quot;name&quot;: &quot;skeleton&quot;,
-  &quot;description&quot; : &quot;skeleton project&quot;,
-  &quot;version&quot;: &quot;0.0.0&quot;,
-  &quot;dependencies&quot;: {
-    &quot;express&quot;: &quot;4.1.x&quot;,
-    &quot;body-parser&quot;: &quot;1.0.2&quot;
+ &quot;name&quot;: &quot;bbtools&quot;,
+ &quot;version&quot;: &quot;0.0.0&quot;,
+ &quot;bin&quot;: { &quot;bb&quot;: &quot;bb.js&quot;},
+ &quot;dependencies&quot;: {
+   &quot;underscore&quot;: &quot;1.6.0&quot;
   }
 }
-</code></pre><p>Nous venons de définir quelles étaient les librairies dont nous avions besoin côté serveur. Maintenant pour les télécharger/installer c&#39;est simple, tapez dans un terminal, la commande :</p>
-<pre><code>npm install
-</code></pre><p>En fonction de votre bande passante, cela prendra plus ou moins de temps, mais <strong>npm</strong> va télécharger les dépendances dans un répertoire <code>node_modules</code>, vous devriez donc avoir l&#39;arborescence suivante :</p>
-<pre><code>skeleton/
-├── node_modules/
-|   ├── express/
-|   └── body-parser/   
-├── public.src/
-|   ├── js/
-|   |   └── app.js
-|   └── index.html
-├── main.js
-└── package.json
-</code></pre><p>Vous noterez que vous pouvez définir dans le fichier <code>package.json</code> les versions dont vous avez besoin et les figer. Cela peut vous éviter de mauvaises surprises lors d&#39;un changement de version de framework.</p>
-<h2 id="un-bout-de-code-serveur-pour-v-rifier-que-tout-fonctionne">Un bout de code serveur pour vérifier que tout fonctionne</h2>
-<p>Dans le fichier <code>main.js</code>, saisissez ceci :</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>)
-  , http = <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>)
-  , bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">'body-parser'</span>)
-  , app = express()
-  , http_port = <span class="hljs-number">3000</span>;
-
-app.use(express.static(__dirname + <span class="hljs-string">'/public.src'</span>));
-app.use(bodyParser());
-
-app.get(<span class="hljs-string">"/hello"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res)</span> {</span>
-  res.send(<span class="hljs-string">"&lt;h1&gt;Hello&lt;/h1&gt;"</span>);
+</code></pre><p>L&#39;objectif étant de disposer d&#39;une commande <code>bb</code> qui exécutera le fichier <code>bb.js</code>. Notez <code>&quot;underscore&quot;: &quot;1.6.0&quot;</code>, nous allons nous servir des capacités de &quot;templating&quot; de la librairie Underscore</p>
+<h2 id="notre-template">Notre template</h2>
+<p>Créez (dans le même répertoire) un fichier <code>bb.tpl</code> avec le contenu suivant :</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/*--- &lt;%= modelName %&gt; Model ---*/</span>
+<span class="hljs-keyword">var</span> &lt;%= modelName %&gt;Model = Backbone.Model.extend({
+    defaults : <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span>{</span>
+      <span class="hljs-keyword">return</span> {}
+    },
+    urlRoot : <span class="hljs-string">"&lt;%= modelName.toLowerCase() %&gt;s"</span>
 });
 
-app.listen(http_port);
-console.log(<span class="hljs-string">"Listening on "</span> + http_port);
+<span class="hljs-comment">/*--- &lt;%= modelName %&gt;s Collection ---*/</span>
+<span class="hljs-keyword">var</span> &lt;%= modelName %&gt;sCollection = Backbone.Collection.extend({
+  url : <span class="hljs-string">"&lt;%= modelName.toLowerCase() %&gt;s"</span>,
+  model: <span class="xml"><span class="vbscript">&lt;%= modelName %&gt;</span>Model
+});</span>
 </code></pre>
-<h2 id="deux-bouts-de-codes-clients-pour-v-rifier-que-tout-fonctionne">Deux bouts de codes clients pour vérifier que tout fonctionne</h2>
-<p>Dans le fichier <code>app.js</code>, saisissez ceci :</p>
-<pre><code class="lang-javascript">document.querySelector(<span class="hljs-string">"hello"</span>).innerHTML = <span class="hljs-string">"Hello World!"</span>;
-</code></pre>
-<p>Dans le fichier <code>index.html</code>, saisissez ceci :</p>
-<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>skeleton<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-  <span class="hljs-comment">&lt;!-- Note de l'auteur
-    certains n'aiment pas les tags personnalisés
-    à l'approche des WebComponents, je pense qu'il faut commencer
-    à penser et apprendre à bosser ensemble autrement
-  --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">hello</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">hello</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/app.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<h2 id="le-code-applicatif">Le code applicatif</h2>
+<p>Créez (dans le même répertoire) un fichier <code>bb.js</code> avec le contenu suivant :</p>
+<pre><code class="lang-javascript">#!<span class="hljs-regexp">/usr/</span>bin/env node
 
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+<span class="hljs-keyword">var</span> _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'underscore'</span>);
+
+<span class="hljs-built_in">require</span>.extensions[<span class="hljs-string">'.tpl'</span>] = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(module, filename)</span> {</span>
+  module.exports = fs.readFileSync(filename, <span class="hljs-string">'utf8'</span>);
+};
+
+<span class="hljs-keyword">var</span> tpl  = _.template(<span class="hljs-built_in">require</span>(<span class="hljs-string">"./bb.tpl"</span>));
+<span class="hljs-keyword">var</span> model_name = process.argv[<span class="hljs-number">2</span>]
+
+fs.writeFileSync(
+    process.cwd() +<span class="hljs-string">"/"</span> + model_name + <span class="hljs-string">".js"</span>
+  , tpl({modelName :model_name})
+);
 </code></pre>
-<h2 id="v-rification">Vérification</h2>
-<p>Il suffit de lancer :</p>
-<pre><code>node main.js
-</code></pre><p>Puis d&#39;ouvrir dans votre navigateur :</p>
+<h3 id="explications">Explications</h3>
 <ul>
-<li><a href="http://localhos:3000" target="_blank">http://localhos:3000</a> qui vous chargera la page <code>index.html</code> avec le message &quot;Hello World!&quot;</li>
-<li><a href="http://localhos:3000/hello" target="_blank">http://localhos:3000/hello</a> qui va appeler notre route express <code>hello</code> et qui nous affichera un &quot;gros&quot; <strong>Hello</strong>.</li>
+<li><code>#!/usr/bin/env node</code> : rendra le fichier exécutable</li>
+<li><code>_.template(require(&quot;./bb.tpl&quot;))</code> va lire notre fichier <code>bb.tpl</code> et le transforme en objet template pour Underscore</li>
+<li><code>process.cwd()</code> permet de connaître le répertoire d&#39;où l&#39;on appelle la commande <code>bb</code></li>
+<li><code>process.argv[2]</code> permet d&#39;obtenir le 1er argument passé à la commande <code>bb</code> (comme par exemple <code>bb Human</code>)</li>
+<li><code>tpl({modelName :model_name })</code> : on &quot;explique&quot; au template que l&#39;on passe le contenu de <code>model_name</code> à <code>modelName</code> définie dans le template</li>
 </ul>
-<p>Rien de transcendant, mais ça a le mérite de nous permettre de vérifier que nous avons bien tout installer correctement.</p>
-<h2 id="remarque-avant-de-passer-la-suite">Remarque avant de passer à la suite</h2>
-<p>Nul besoin de vous &quot;trimbaler&quot; le répertoire <code>node_module</code> avec tout son contenu, vous pourrez grâce à <code>package.json</code> tout re-télécharger. A moins de savoir à l&#39;avance que vous allez faire une démo dans un endroit sans connexion web.</p>
+<h2 id="enregistrez-votre-outil">Enregistrez votre outil</h2>
+<p>Pour que votre nouvelle commande soit disponible &quot;partout&quot; (pouvoir l&#39;appeler de n&#39;importe quel répertoire), tapez la commande suivante (on est toujours dans notre répertoire de développement) :</p>
+<pre><code>npm link
+</code></pre><p>Si ce n&#39;est pas déjà fait, cela va télécharger les dépendances nécessaires (underscrore dans notre cas), puis créer un &quot;lien symbolique&quot; vers votre fichier <code>bb.js</code></p>
+<p>Maintenant, de n&#39;importe où, dans une console (terminal), vous pouvez taper <code>bb Animal</code> et cela vous génèrera votre fichier <code>Animal.js</code> avec votre modèle et votre collection.</p>
+<p>Voilà, c&#39;est très simple et utile. Si vous sentez que votre outil devient une usine à gaz, passez quand même à Yeoman ;).</p>
 
                     
                     </section>
@@ -345,10 +321,10 @@ console.log(<span class="hljs-string">"Listening on "</span> + http_port);
         </div>
 
         
-        <a href="../chap-00-les-bases/README.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        <a href="../chap-02-faites-vos-outils/README.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chap-00-les-bases/02-squelette-frontend.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        <a href="../chap-02-faites-vos-outils/02-interactivite-dans-vos-outils.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

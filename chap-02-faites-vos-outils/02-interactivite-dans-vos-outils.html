@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Squelette de projet : backend | Préparer son projet JS</title>
+        <title>Un peu d&#39;interactivité | Préparer son projet JS</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,11 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../chap-00-les-bases/02-squelette-frontend.html" />
         
-        
-        <link rel="prev" href="../chap-00-les-bases/README.html" />
+        <link rel="prev" href="../chap-02-faites-vos-outils/01-mon-1er-outil-npm.html" />
         
 
-        <meta property="og:title" content="Squelette de projet : backend | Préparer son projet JS">
+        <meta property="og:title" content="Un peu d&#39;interactivité | Préparer son projet JS">
         <meta property="og:site_name" content="Préparer son projet JS">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -42,7 +40,7 @@
 
 
         
-    <div class="book" data-github="e-books/preparer.son.projet.js" data-level="1.1" data-basepath=".." data-revision="1400227118246">
+    <div class="book" data-github="e-books/preparer.son.projet.js" data-level="3.2" data-basepath=".." data-revision="1400227118246">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -120,7 +118,7 @@
 
         
         <li>
-            <a href="https://github.com/e-books/preparer.son.projet.js/edit/master/chap-00-les-bases/01-squelette-backend.md" target="blank">Edit and Contribute</a>
+            <a href="https://github.com/e-books/preparer.son.projet.js/edit/master/chap-02-faites-vos-outils/02-interactivite-dans-vos-outils.md" target="blank">Edit and Contribute</a>
         </li>
         
 
@@ -222,7 +220,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 25%;min-width: 12.5%;"></div>
+        <div class="inner" style="width: 100%;min-width: 87.5%;"></div>
     </div>
     <div class="chapters">
     
@@ -232,110 +230,127 @@
     
         <a href="../chap-00-les-bases/01-squelette-backend.html" title="Squelette de projet : backend" class="chapter done " data-progress="1.1" style="left: 25%;"></a>
     
-        <a href="../chap-00-les-bases/02-squelette-frontend.html" title="Squelette de projet : frontend" class="chapter  " data-progress="1.2" style="left: 37.5%;"></a>
+        <a href="../chap-00-les-bases/02-squelette-frontend.html" title="Squelette de projet : frontend" class="chapter done " data-progress="1.2" style="left: 37.5%;"></a>
     
-        <a href="../chap-00-les-bases/03-livraison.html" title="Livraison" class="chapter  " data-progress="1.3" style="left: 50%;"></a>
+        <a href="../chap-00-les-bases/03-livraison.html" title="Livraison" class="chapter done " data-progress="1.3" style="left: 50%;"></a>
     
-        <a href="../chap-01-les-tests/README.html" title="Les tests" class="chapter  new-chapter" data-progress="2" style="left: 62.5%;"></a>
+        <a href="../chap-01-les-tests/README.html" title="Les tests" class="chapter done new-chapter" data-progress="2" style="left: 62.5%;"></a>
     
-        <a href="../chap-02-faites-vos-outils/README.html" title="Faites vos outils" class="chapter  new-chapter" data-progress="3" style="left: 75%;"></a>
+        <a href="../chap-02-faites-vos-outils/README.html" title="Faites vos outils" class="chapter done new-chapter" data-progress="3" style="left: 75%;"></a>
     
-        <a href="../chap-02-faites-vos-outils/01-mon-1er-outil-npm.html" title="Mon 1er outil npm" class="chapter  " data-progress="3.1" style="left: 87.5%;"></a>
+        <a href="../chap-02-faites-vos-outils/01-mon-1er-outil-npm.html" title="Mon 1er outil npm" class="chapter done " data-progress="3.1" style="left: 87.5%;"></a>
     
-        <a href="../chap-02-faites-vos-outils/02-interactivite-dans-vos-outils.html" title="Un peu d&#39;interactivité" class="chapter  " data-progress="3.2" style="left: 100%;"></a>
+        <a href="../chap-02-faites-vos-outils/02-interactivite-dans-vos-outils.html" title="Un peu d&#39;interactivité" class="chapter done " data-progress="3.2" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2">
+                    <section class="normal" id="section-gitbook_8">
                     
-                        <h1 id="d-clarer-les-librairies-back-end-">Déclarer les librairies &quot;back-end&quot;</h1>
-<p>A la racine de skeleton, créer un fichier <code>package.json</code> :</p>
-<pre><code>skeleton/
-├── public.src/
-|   ├── js/
-|   |   └── app.js
-|   └── index.html
-├── main.js
-└── package.json
-</code></pre><p>Avec le contenu suivant :</p>
+                        <h1 id="un-peu-d-interactivit-dans-vos-outils-node">Un peu d&#39;interactivité dans vos outils node</h1>
+<p>Je vous expliquais il y a peu comment construire ses propres outils en ligne de commande avec node et npm : <a href="http://k33g.github.io/2014/05/09/NPM-NODE-CLI.html" target="_blank">http://k33g.github.io/2014/05/09/NPM-NODE-CLI.html</a>. Nous allons voir aujourd&#39;hui comment ajouté un peu d&#39;interactivité et de couleur à tout ça. Donc, il faut repartir du même projet (donc lire l&#39;article).</p>
+<h2 id="2-nouveaux-modules-prompt-et-colors-js">2 nouveaux modules : prompt et colors.js</h2>
+<p>Lorsque je parle d&#39;interactivité, je veux dire, que mon &quot;programme&quot; va &quot;me poser&quot; des questions auxquelles je vais devoir répondre. Pour cela je vais utiliser <strong>prompt</strong> (<a href="https://github.com/flatiron/prompt" target="_blank">https://github.com/flatiron/prompt</a>), et pour les couleurs, le bien nommé <strong>colors.js</strong> (<a href="https://github.com/Marak/colors.js" target="_blank">https://github.com/Marak/colors.js</a>). Modifiez donc votre fichier <code>package.json</code> de la manière suivante :</p>
 <pre><code>{
-  &quot;name&quot;: &quot;skeleton&quot;,
-  &quot;description&quot; : &quot;skeleton project&quot;,
-  &quot;version&quot;: &quot;0.0.0&quot;,
-  &quot;dependencies&quot;: {
-    &quot;express&quot;: &quot;4.1.x&quot;,
-    &quot;body-parser&quot;: &quot;1.0.2&quot;
+ &quot;name&quot;: &quot;bbtools&quot;,
+ &quot;version&quot;: &quot;0.0.0&quot;,
+ &quot;bin&quot;: { &quot;bb&quot;: &quot;bb.js&quot;},
+ &quot;dependencies&quot;: {
+   &quot;underscore&quot;: &quot;1.6.0&quot;,
+   &quot;prompt&quot;: &quot;0.2.12&quot;,
+   &quot;colors&quot;: &quot;0.6.2&quot;
   }
 }
-</code></pre><p>Nous venons de définir quelles étaient les librairies dont nous avions besoin côté serveur. Maintenant pour les télécharger/installer c&#39;est simple, tapez dans un terminal, la commande :</p>
-<pre><code>npm install
-</code></pre><p>En fonction de votre bande passante, cela prendra plus ou moins de temps, mais <strong>npm</strong> va télécharger les dépendances dans un répertoire <code>node_modules</code>, vous devriez donc avoir l&#39;arborescence suivante :</p>
-<pre><code>skeleton/
-├── node_modules/
-|   ├── express/
-|   └── body-parser/   
-├── public.src/
-|   ├── js/
-|   |   └── app.js
-|   └── index.html
-├── main.js
-└── package.json
-</code></pre><p>Vous noterez que vous pouvez définir dans le fichier <code>package.json</code> les versions dont vous avez besoin et les figer. Cela peut vous éviter de mauvaises surprises lors d&#39;un changement de version de framework.</p>
-<h2 id="un-bout-de-code-serveur-pour-v-rifier-que-tout-fonctionne">Un bout de code serveur pour vérifier que tout fonctionne</h2>
-<p>Dans le fichier <code>main.js</code>, saisissez ceci :</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>)
-  , http = <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>)
-  , bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">'body-parser'</span>)
-  , app = express()
-  , http_port = <span class="hljs-number">3000</span>;
+</code></pre><p>Puis faites moi un petit <code>npm install</code> pour télécharger les 2 nouvelles dépendances.</p>
+<h2 id="modification-de-bb-js-">Modification de <code>bb.js</code></h2>
+<p>Maintenant, plutôt que de passer le nom du modèle en argument, je souhaite que ce soit l&#39;outil qui demande le nom du modèle, je voudrais aussi pouvoir saisir les valeurs par défaut du modèle. Nous allons donc modifier le code du fichier <code>bb.js</code> de la façon suivante :</p>
+<p><strong>Ajout des référence à prompt et colors</strong>:</p>
+<pre><code class="lang-javascript">#!<span class="hljs-regexp">/usr/</span>bin/env node
 
-app.use(express.static(__dirname + <span class="hljs-string">'/public.src'</span>));
-app.use(bodyParser());
+<span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>)
+  , _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'underscore'</span>)
+  , prompt = <span class="hljs-built_in">require</span>(<span class="hljs-string">'prompt'</span>)
+  , colors = <span class="hljs-built_in">require</span>(<span class="hljs-string">'colors'</span>);
+</code></pre>
+<p><strong>Ici on ne change rien</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">require</span>.extensions[<span class="hljs-string">'.tpl'</span>] = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(module, filename)</span> {</span>
+  module.exports = fs.readFileSync(filename, <span class="hljs-string">'utf8'</span>);
+};
 
-app.get(<span class="hljs-string">"/hello"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res)</span> {</span>
-  res.send(<span class="hljs-string">"&lt;h1&gt;Hello&lt;/h1&gt;"</span>);
+<span class="hljs-keyword">var</span> tpl  = _.template(<span class="hljs-built_in">require</span>(<span class="hljs-string">"./bb.tpl"</span>));
+</code></pre>
+<p><strong>Ajout d&#39;un &quot;schema&quot; de saisie pour prompt</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> schema = {
+  properties: {
+    model_name: {
+      description: <span class="hljs-string">'Enter model name'</span>.green,
+      pattern: <span class="hljs-regexp">/^[a-zA-Z]+$/</span>,
+      message: <span class="hljs-string">'Model name must be only letters'</span>.inverse.red,
+      required: <span class="hljs-literal">true</span>
+    },
+    default_values: {
+      description: <span class="hljs-string">'Default values'</span>.blue,
+      <span class="hljs-keyword">default</span>: <span class="hljs-string">""</span>
+    }
+  }
+};
+</code></pre>
+<p>Vous notez que vous avez &quot;la main&quot; sur ce que vous pouvez ou n pouvez pas saisir. Ensuite, notez aussi ceci : <code>&#39;Enter model name&#39;.green</code> ou <code>&#39;Model name must be only letters&#39;.inverse.red</code> et encore <code>&#39;Default values&#39;.blue</code>, c&#39;est <strong>colors.js</strong> qui permet en augmentant les strings de définir les couleurs d&#39;affichage des textes dans votre console ou terminal.</p>
+<p><strong>Utilisation du &quot;schema&quot; de saisie</strong>:</p>
+<p>Il suffi de passer à <code>prompt.get()</code> votre <code>schema</code> ainsi que la fonction à exécuter avec comme paramètres les erreurs (<code>err</code>) et les données saisies (<code>result</code>). <code>result</code>est un objet qui a pour propriétés les propriétés de <code>schema.properties</code> donc <code>model_name</code> et <code>default_values</code></p>
+<pre><code class="lang-javascript">prompt.get(schema, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, result)</span> {</span>
+
+  <span class="hljs-keyword">if</span>(err) {
+    console.log(<span class="hljs-string">"Bye!"</span>.rainbow);
+    process.exit(<span class="hljs-number">1</span>);
+  } <span class="hljs-comment">//Ctrl+c to exit</span>
+
+  console.log(<span class="hljs-built_in">JSON</span>.stringify(result).cyan);
+
+  fs.writeFileSync(
+      process.cwd() +<span class="hljs-string">"/"</span> + result.model_name + <span class="hljs-string">".js"</span>
+    , tpl({modelName: result.model_name, defaultValues: result.default_values})
+  );
+
+});
+</code></pre>
+<h2 id="modification-du-template-bb-tpl-">Modification du template <code>bb.tpl</code></h2>
+<p>Nous modifions le template pour prendre en compte la nouvelle valeur <code>defaultValues: result.default_values</code> :</p>
+<pre><code>/*--- &lt;%= modelName %&gt; Model ---*/
+var &lt;%= modelName %&gt;Model = Backbone.Model.extend({
+  defaults : function (){
+    return {&lt;%= defaultValues %&gt;}
+  },
+  urlRoot : &quot;&lt;%= modelName.toLowerCase() %&gt;s&quot;
 });
 
-app.listen(http_port);
-console.log(<span class="hljs-string">"Listening on "</span> + http_port);
-</code></pre>
-<h2 id="deux-bouts-de-codes-clients-pour-v-rifier-que-tout-fonctionne">Deux bouts de codes clients pour vérifier que tout fonctionne</h2>
-<p>Dans le fichier <code>app.js</code>, saisissez ceci :</p>
-<pre><code class="lang-javascript">document.querySelector(<span class="hljs-string">"hello"</span>).innerHTML = <span class="hljs-string">"Hello World!"</span>;
-</code></pre>
-<p>Dans le fichier <code>index.html</code>, saisissez ceci :</p>
-<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>skeleton<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-  <span class="hljs-comment">&lt;!-- Note de l'auteur
-    certains n'aiment pas les tags personnalisés
-    à l'approche des WebComponents, je pense qu'il faut commencer
-    à penser et apprendre à bosser ensemble autrement
-  --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">hello</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">hello</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/app.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+/*--- &lt;%= modelName %&gt;s Collection ---*/
+var &lt;%= modelName %&gt;sCollection = Backbone.Collection.extend({
+  url : &quot;&lt;%= modelName.toLowerCase() %&gt;s&quot;,
+  model: &lt;%= modelName %&gt;Model
+});
+</code></pre><h2 id="utilisation">Utilisation</h2>
+<p>Dans un terminal, tapez <code>bb</code> et répondez (trompez vous aussi) :</p>
+<p><img src="assets/mytool2.png" alt="Alt &quot;mytool2.png&quot;"></p>
+<p><img src="assets/mytool.png" alt="Alt &quot;mytool1.png&quot;"></p>
+<p>Avec le code généré :</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/*--- Human Model ---*/</span>
+<span class="hljs-keyword">var</span> HumanModel = Backbone.Model.extend({
+  defaults : <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span>{</span>
+    <span class="hljs-keyword">return</span> {firstName:<span class="hljs-string">"John"</span>, lastName:<span class="hljs-string">"Doe"</span>}
+  },
+  urlRoot : <span class="hljs-string">"humans"</span>
+});
 
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-comment">/*--- Humans Collection ---*/</span>
+<span class="hljs-keyword">var</span> HumansCollection = Backbone.Collection.extend({
+  url : <span class="hljs-string">"humans"</span>,
+  model: HumanModel
+});
 </code></pre>
-<h2 id="v-rification">Vérification</h2>
-<p>Il suffit de lancer :</p>
-<pre><code>node main.js
-</code></pre><p>Puis d&#39;ouvrir dans votre navigateur :</p>
-<ul>
-<li><a href="http://localhos:3000" target="_blank">http://localhos:3000</a> qui vous chargera la page <code>index.html</code> avec le message &quot;Hello World!&quot;</li>
-<li><a href="http://localhos:3000/hello" target="_blank">http://localhos:3000/hello</a> qui va appeler notre route express <code>hello</code> et qui nous affichera un &quot;gros&quot; <strong>Hello</strong>.</li>
-</ul>
-<p>Rien de transcendant, mais ça a le mérite de nous permettre de vérifier que nous avons bien tout installer correctement.</p>
-<h2 id="remarque-avant-de-passer-la-suite">Remarque avant de passer à la suite</h2>
-<p>Nul besoin de vous &quot;trimbaler&quot; le répertoire <code>node_module</code> avec tout son contenu, vous pourrez grâce à <code>package.json</code> tout re-télécharger. A moins de savoir à l&#39;avance que vous allez faire une démo dans un endroit sans connexion web.</p>
+<p>C&#39;est tout simple, un peu plus &quot;user friendly&quot;, et bientôt vous pourrez refaire <strong>Yeoman</strong> ;).</p>
 
                     
                     </section>
@@ -345,10 +360,8 @@ console.log(<span class="hljs-string">"Listening on "</span> + http_port);
         </div>
 
         
-        <a href="../chap-00-les-bases/README.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        <a href="../chap-02-faites-vos-outils/01-mon-1er-outil-npm.html" class="navigation navigation-prev navigation-unique"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../chap-00-les-bases/02-squelette-frontend.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

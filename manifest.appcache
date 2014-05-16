@@ -1,12 +1,16 @@
 CACHE MANIFEST
-# Revision 1400225769709
+# Revision 1400227118247
 
 CACHE:
 index.html
 chap-00-les-bases/01-squelette-backend.html
 chap-00-les-bases/02-squelette-frontend.html
-chap-00-les-bases/README.html
 chap-00-les-bases/03-livraison.html
+chap-00-les-bases/README.html
+chap-01-les-tests/README.html
+chap-02-faites-vos-outils/01-mon-1er-outil-npm.html
+chap-02-faites-vos-outils/02-interactivite-dans-vos-outils.html
+chap-02-faites-vos-outils/README.html
 gitbook/app.js
 gitbook/fonts/anonymouspro/400.woff
 gitbook/fonts/anonymouspro/400i.woff
